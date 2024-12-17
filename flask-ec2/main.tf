@@ -53,9 +53,8 @@ resource "aws_instance" "flask_instance" {
   vpc_security_group_ids      = [aws_security_group.flask_sg.id]
   key_name                    = aws_key_pair.ec2_instance_key_pair.id
   associate_public_ip_address = true
-  iam_instance_profile        = aws_iam_instance_profile.ec2_instance_profile.name
 
-  user_data = data.template_cloudinit_config.setup-script.rendered
+  user_data = data.cloudinit_config.setup-script.rendered
 
   tags = {
     Name = var.instance_name
