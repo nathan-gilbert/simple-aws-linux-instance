@@ -11,7 +11,7 @@ resource "aws_key_pair" "ec2_instance_key_pair" {
 
   provisioner "local-exec" {
     command     = "echo '${tls_private_key.ec2_instance_key.private_key_pem}' > ./ec2_instance_key.pem"
-    interpreter = ["pwsh", "-Command"]
+    # interpreter = ["pwsh", "-Command"]
   }
 }
 
