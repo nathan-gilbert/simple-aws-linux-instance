@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": { "Service": "vmie.amazonaws.com" },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::my-export-bucket/*",
+      "Condition": {
+        "StringEquals": { "aws:SourceAccount": "<aws-account-id>" }
+      }
+    }
+  ]
+}
