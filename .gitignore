@@ -40,3 +40,4 @@ terraform.rc
 *.raw
 *.img
 venv
+*.img.gz
