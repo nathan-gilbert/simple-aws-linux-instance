@@ -3,11 +3,11 @@
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": { "Service": "vmie.amazonaws.com" },
+      "Principal": { "Service": "*" },
       "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::my-export-bucket/*",
+      "Resource": "arn:aws:s3:::my-ami-export-bucket-acqlkj/*",
       "Condition": {
-        "StringEquals": { "aws:SourceAccount": "<aws-account-id>" }
+        "StringEquals": { "aws:SourceAccount": "163967541593" }
       }
     }
   ]
