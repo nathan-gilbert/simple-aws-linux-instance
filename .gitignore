@@ -39,3 +39,4 @@ terraform.rc
 *.pem
 *.raw
 *.img
+venv
