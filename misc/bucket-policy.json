@@ -3,11 +3,14 @@
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": { "Service": "*" },
-      "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::my-ami-export-bucket-acqlkj/*",
+      "Principal": { "Service": "vmie.amazonaws.com" },
+      "Action": ["s3:PutObject", "s3:GetBucketLocation"],
+      "Resource": [
+        "arn:aws:s3:::my-ami-export-bucket-acqlkj",
+        "arn:aws:s3:::my-ami-export-bucket-acqlkj/*"
+      ],
       "Condition": {
-        "StringEquals": { "aws:SourceAccount": "163967541593" }
+        "StringEquals": { "aws:SourceAccount": "16396754159" }
       }
     }
   ]

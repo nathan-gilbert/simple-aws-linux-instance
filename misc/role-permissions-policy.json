@@ -4,15 +4,14 @@
     {
       "Effect": "Allow",
       "Action": ["s3:PutObject", "s3:GetBucketLocation", "s3:GetObject"],
-      "Resource": "arn:aws:s3:::my-export-bucket/*"
+      "Resource": "arn:aws:s3:::my-ami-export-bucket-acqlkj/*"
     },
     {
       "Effect": "Allow",
       "Action": [
-        "ec2:ModifySnapshotAttribute",
-        "ec2:CopySnapshot",
-        "ec2:Describe*",
-        "ec2:ExportImage"
+        "ec2:DescribeExportTasks",
+        "ec2:CreateExportTask",
+        "ec2:CancelExportTask"
       ],
       "Resource": "*"
     }
