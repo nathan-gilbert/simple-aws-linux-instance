@@ -61,4 +61,9 @@ resource "aws_instance" "flask_instance" {
   }
 
   monitoring = true
+
+  root_block_device {
+    volume_size = 5
+    volume_type = "gp3"
+  }
 }
